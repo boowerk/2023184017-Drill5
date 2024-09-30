@@ -24,6 +24,9 @@ def handle_events():
             elif event.key == SDLK_s:
                 move_y -= 10
                 dir = 'down'
+            elif event.key == SDLK_d:
+                move_x += 10
+                dir = 'right'
         elif event.type == SDL_KEYUP:
             if event.key == SDLK_w:
                 move_y -= 10
@@ -31,6 +34,8 @@ def handle_events():
                 move_x += 10
             elif event.key == SDLK_s:
                 move_y += 10
+            elif event.key == SDLK_d:
+                move_x -= 10
 
 
 
