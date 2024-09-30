@@ -16,11 +16,17 @@ def handle_events():
             if event.key == SDLK_ESCAPE:
                 running = False
             elif event.key == SDLK_w:
-                move_y += 5
+                move_y += 10
                 dir = 'up'
+            elif event.key == SDLK_a:
+                move_x -= 10
+                dir = 'left'
         elif event.type == SDL_KEYUP:
             if event.key == SDLK_w:
-                move_y -= 5
+                move_y -= 10
+            elif event.key == SDLK_a:
+                move_x += 10
+                
 
 
     pass
