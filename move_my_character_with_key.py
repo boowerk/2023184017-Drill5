@@ -46,6 +46,9 @@ def check_boundarie():
     global x, y
     if x - sprite_width // 2 < 0:
         x = sprite_width // 2
+    if x + sprite_width // 2 > 800:
+        x = 800 - sprite_width // 2
+
 
 running = True
 sprite_width = 163
