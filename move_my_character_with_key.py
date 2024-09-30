@@ -50,6 +50,8 @@ def check_boundarie():
         x = 800 - sprite_width // 2
     if y - sprite_height // 2 < 0:
         y = sprite_height // 2
+    if y + sprite_height // 2 > 600:
+        y = 600 - sprite_height // 2
 
 
 running = True
