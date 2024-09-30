@@ -37,9 +37,6 @@ def handle_events():
             elif event.key == SDLK_d:
                 move_x -= 10
 
-
-
-
     pass
 
 def check_boundarie():
