@@ -42,6 +42,11 @@ def handle_events():
 
     pass
 
+def check_boundarie():
+    global x, y
+    if x - sprite_width // 2 < 0:
+        x = sprite_width // 2
+
 running = True
 sprite_width = 163
 sprite_height = 141
@@ -59,6 +64,8 @@ while running:
 
     x += move_x
     y += move_y
+
+    check_boundarie()
 
     update_canvas()
     handle_events()
