@@ -19,10 +19,18 @@ def handle_events():
     pass
 
 running = True
+sprite_width = 163
+sprite_height = 141
+frame = 0
+dir = 'down'
+x, y = 400, 300
+dir_rows = {'left' : 0, 'down' : 1, 'right' : 2, 'up' : 3}
 
 while running:
     clear_canvas()
     background.clip_draw(0, 0, 1280, 1080, 400, 300, 800, 600)
+    current_row = dir_rows[dir]
+    character.clip_draw(frame * sprite_width, (3 - current_row) * sprite_height, sprite_width, sprite_height, x, y)
     update_canvas()
     handle_events()
     pass
